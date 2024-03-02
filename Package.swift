@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
@@ -13,7 +13,12 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "CloudStorage"),
+        .target(
+            name: "CloudStorage",
+            dependencies: [],
+            path: "Sources",
+            resources: [.copy("PrivacyInfo.xcprivacy")]
+        )
     ]
 )
 
